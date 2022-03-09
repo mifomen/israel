@@ -1,0 +1,110 @@
+.details {
+  padding-top: 28px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 30px;
+  }
+}
+
+.details__title {
+  margin-top: 0;
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
+.details__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: myCounter;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 245px 249px;
+    column-gap: 139px;
+    row-gap: 113px;
+  }
+
+  @media (min-width: 800px) {
+    column-gap: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 79px;
+  }
+}
+
+.details__item {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    position: relative;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      color: var(--light_grey);
+      display: flex;
+      font-family: var(--basic-font);
+      font-size: 280px;
+      line-height: 280px;
+      position: absolute;
+      z-index: -1;
+      top: -40px;
+      right: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background: var(--details-icon) no-repeat center / 32px;
+    background-color: var(--green);
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &:first-of-type::after {
+    @media (min-width: $tablet-width) {
+      margin-right: 16px;
+    }
+  }
+
+  &--icon_leaf {
+    --details-icon: url("../../img/icons/sprite.svg#leaf");
+  }
+
+  &--icon_water {
+    --details-icon: url("../../img/icons/sprite.svg#water");
+  }
+
+  &--icon_eat {
+    --details-icon: url("../../img/icons/sprite.svg#eat");
+  }
+
+  &--icon_time {
+    --details-icon: url("../../img/icons/sprite.svg#time");
+  }
+}

@@ -1,0 +1,139 @@
+.footer-page {
+  background-color: var(--light_grey);
+  padding-top: 39px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 92px;
+  }
+}
+
+.footer-page__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 61px;
+  }
+}
+
+.footer-page__logo {
+  padding-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid var(--line_grey);
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-top: 6px;
+    width: auto;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 8px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer-page__social-list {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  justify-items: center;
+  gap: 20px 33px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+    width: 110px;
+    border: none;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+  }
+}
+
+.footer-page__social-link {
+  display: flex;
+  width: 22;
+  height: 22px;
+  color: var(--dark);
+  align-items: center;
+
+  &:hover {
+    color: var(--green);
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.footer-page__face {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: auto;
+  }
+}
+
+.footer-page__vk {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: auto;
+  }
+}
+
+.footer-page__insta {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: auto;
+  }
+}
+
+.footer-page__academy-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+  border-top: 1px solid var(--line_grey);
+  width: 100%;
+  color: var(--dark);
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    text-align: right;
+    border: none;
+    padding: 0;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
+  }
+
+  &:hover {
+    color: var(--green);
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}

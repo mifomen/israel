@@ -1,0 +1,350 @@
+.products {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 52px;
+  }
+}
+
+.products__table {
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin-inline: auto;
+  }
+}
+
+.products__caption {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--grey);
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.products__title {
+  line-height: 30px;
+  margin-inline: 16px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 10px 30px 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-inline: 0;
+    margin-top: 10px;
+    margin-bottom: 62px;
+  }
+}
+
+.products__tbody {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-inline: 30px;
+    padding-top: 40px;
+    column-gap: 60px;
+    row-gap: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    row-gap: 64px;
+    margin-inline: auto;
+  }
+}
+
+.products__product-card {
+  font-size: 12px;
+  line-height: 14px;
+  display: grid;
+  gap: 0;
+  grid-template-areas:
+    "i i n n"
+    "i i m m "
+    "i i t t"
+    "i i p p"
+    "b b b b";
+  width: 280px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    grid-template-areas: initial;
+    grid-template-rows: 200px min-content auto auto auto 1fr;
+    background-image: linear-gradient(var(--white) 74px, var(--light_grey) 74px);
+    width: 322px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    background-image: linear-gradient(var(--white) 80px, var(--light_grey) 80px);
+  }
+}
+
+.products__link:hover {
+  opacity: 0.6;
+}
+
+.products__name {
+  grid-area: n;
+  width: 100px;
+  font-family: var(--basic-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--black);
+  margin-left: -42px;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: initial;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    justify-self: center;
+    width: 150px;
+    padding-top: 35px;
+    margin-bottom: 18px;
+    margin-left: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 21px;
+    width: 150px;
+    align-self: flex-start;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 22px;
+  }
+}
+
+.products__mass {
+  grid-area: m;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -42px;
+
+  @media (min-width: $tablet-width) {
+    margin-inline: 36px;
+    grid-area: initial;
+    border-bottom: 1px solid var(--dark_grey);
+    padding-bottom: 8px;
+  }
+}
+
+.products__mass::before {
+  content: "Масса";
+}
+
+.products__taste {
+  grid-area: t;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -42px;
+
+  @media (min-width: $tablet-width) {
+    margin-inline: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    grid-area: initial;
+    border-bottom: 1px solid var(--dark_grey);
+  }
+}
+
+.products__taste::before {
+  content: "Вкус";
+}
+
+.products__price {
+  grid-area: p;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  margin-left: -42px;
+
+  @media (min-width: $tablet-width) {
+    margin-inline: 36px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    grid-area: initial;
+    border-bottom: 1px solid var(--dark_grey);
+  }
+}
+
+.products__price::before {
+  content: "Цена";
+}
+
+.products__img {
+  order: -1;
+  grid-area: i;
+
+  @media (min-width: $tablet-width) {
+    grid-area: initial;
+  }
+}
+
+.products__image {
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200;
+    margin-inline: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 172px;
+    height: 196px;
+  }
+}
+
+.products__buy {
+  grid-area: b;
+  display: flex;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    grid-area: initial;
+    order: 5;
+    width: 250px;
+    margin-inline: auto;
+    padding-top: 10px;
+    padding-bottom: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    margin-top: 0;
+    // padding-top: 12px;
+  }
+}
+
+.products__buy::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  margin-top: 62px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.products__all {
+  padding-top: 26px;
+  padding-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  text-align: center;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    outline: 1px solid var(--light_grey);
+    width: 322px;
+    margin-top: 76px;
+    padding-top: 50px;
+    padding-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px 38px 40px;
+    width: 245px;
+    margin-bottom: 0;
+  }
+}
+
+.products__another {
+  font-family: var(--basic-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--dark_black);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    width: 134px;
+    margin-bottom: 16px;
+  }
+}
+
+.products__another::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../../icons/sprite.svg#plus") no-repeat;
+  background-position: center;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 50px;
+  }
+}
+
+.products__text {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 8px;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+    margin-bottom: 86px;
+  }
+}
+
+.products__all-link {
+  background-color: var(--light_grey);
+  color: var(--light_black);
+
+  @media (min-width: $tablet-width) {
+    width: 254px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 168px;
+  }
+}
+
+.products__all-link:hover {
+  background-color: var(--grey);
+}
+
+.products__all-link:active {
+  opacity: 0.6;
+}

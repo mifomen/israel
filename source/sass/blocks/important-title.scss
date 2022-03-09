@@ -1,0 +1,12 @@
+.important-title {
+  font-family: var(--basic-font);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: var(--super_black);
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

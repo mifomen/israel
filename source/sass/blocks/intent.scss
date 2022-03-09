@@ -1,0 +1,103 @@
+.intent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.intent__list {
+  list-style-type: none;
+  margin-top: 44px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+    outline: 1px solid var(--outline_grey);
+    padding: 30px 249px 6px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+    outline: 1px solid var(--outline_grey);
+    padding: 30px 249px 6px 28px;
+  }
+}
+
+.intent__item {
+  margin-bottom: 24px;
+  position: relative;
+  display: flexbox;
+  cursor: pointer;
+}
+
+.intent__radio + label {
+  margin-bottom: 14px;
+  margin-left: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 60px;
+  }
+}
+
+.intent__radio + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -6px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--dark_grey);
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: -4px;
+  }
+}
+
+.intent__radio:hover + label::before {
+  cursor: pointer;
+  border: 1px solid var(--super_grey);
+}
+
+.intent__radio:focus-visible + label::after {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.intent__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 3px;
+  width: 13.5px;
+  height: 13.5px;
+  background: var(--green);
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    top: 8px;
+  }
+}
+
+.intent__radio:disabled + label::after {
+  opacity: 0.3;
+}
+
+.intent__radio:disabled + label {
+  opacity: 0.3;
+}

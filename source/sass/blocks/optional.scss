@@ -1,0 +1,94 @@
+.optional__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0 0;
+  color: var(--super_black);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 90px;
+    row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 6px;
+  }
+}
+
+.optional__item {
+  margin-bottom: 24px;
+  position: relative;
+  display: flexbox;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 40%;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 19.4%;
+  }
+}
+
+.optional__checkbox + label {
+  margin-left: 48px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 56px;
+  }
+}
+
+.optional__checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--dark_grey);
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -6px;
+    left: -2px;
+  }
+}
+
+.optional__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  background: url("../../img/icons/sprite.svg#check") no-repeat center;
+  // width: 18px;
+  // height: 14px;
+  // left: 8px;
+  // top: 6px;
+  width: 26px;
+  height: 26px;
+  left: 7px;
+  top: 3px;
+
+  @media (min-width: $tablet-width) {
+    left: 7px;
+    top: 3px;
+  }
+}
+
+.optional__checkbox:focus-visible + label::before {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.optional__checkbox:hover + label::before {
+  border: 1px solid var(--super_grey);
+}
+
+.optional__checkbox:disabled + label {
+  opacity: 0.3;
+}

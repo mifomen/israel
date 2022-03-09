@@ -1,0 +1,29 @@
+.button {
+  width: 280px;
+  height: 40px;
+  background: var(--green);
+  color: var(--white);
+  font-family: var(--basic-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 5px;
+
+  &:hover {
+    background: var(--special_green);
+  }
+
+  &:active {
+    color: var(--white_opacity);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
