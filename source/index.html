@@ -15,7 +15,54 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page__body">
+<body class="page-body">
+  <header class="header-page"">
+    <nav class="nav">
+      <ul class="nav__menu menu">
+        <li class="menu__item"><a class="menu__link" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a></li>
+        <li class="menu__item "> <img class="logotip" src="logotip" alt="logotip"></li>
+        <li class="menu__item">заказать звонок</li>
+      </ul>
+    </nav>
+    <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
+    <picture>
+      <source  type="image/webp" media="(min-width: 768px)" srcset="
+        img/header_tablet@1x.webp 1x,
+        img/header_tablet@2x.webp 2x
+      ">
+      <source type="image/webp" srcset="
+        img/header_mobile@1x.webp 1x,
+        img/header_mobile@2x.webp 2x
+      ">
+      <source media="(min-width: 768px)" srcset="
+        img/header_tablet@1x.png 1x,
+        img/header_tablet@2x.png 2x
+      ">
+      <img class="header__background-image" src="img/header_mobile@1x.png" srcset="img/header_mobile@2x.png 2x" width="312" height="240" alt="Изображение города Israel">
+    </picture>
+    <picture>
+      <source type="image/webp" media="(min-width: 768px)" srcset="
+        img/header_photo_girl_mobile@1x.webp 1x,
+        img/header_photo_girl_mobile@2x.webp 2x
+      ">
+      <source type="image/webp" srcset="
+        img/header_photo_girl_mobile@1x.webp 1x,
+        img/header_photo_girl_mobile@2x.webp 2x
+      ">
+      <source media="(min-width: 768px)" srcset="
+        img/header_photo_girl_mobile@1x.png 1x,
+        img/header_photo_girl_mobile@2x.png 2x
+      ">
+      <img class="header__background-girl" src="img/header_photo_girl_mobile@1x.png" srcset="img/header_photo_girl_mobile@2x.png 2x" width="312" height="240" alt="Изображение города Israel">
+    </picture>
+  </header>
+  <main class="main-page">
+    <span>main</span>
+
+  </main>
+  <footer class="footer-page">
+    <span>footer</span>
+  </footer>
 
 
   <script src="js/app.min.js"></script>
